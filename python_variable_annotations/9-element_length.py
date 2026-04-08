@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+This module defines a function `element_length` that takes an iterator of
+sequences as an argument and returns a list of tuples, where each tuple
+contains a sequence from the iterator and its length.
+"""
 from typing import Iterator, Sequence, List, Tuple
 
 
