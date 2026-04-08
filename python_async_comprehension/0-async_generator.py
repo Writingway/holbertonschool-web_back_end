@@ -8,7 +8,7 @@ import random
 import typing
 
 
-async def async_generator() -> typing.AsyncGenerator[float, None]:
+async def async_generator() -> typing.Generator[float, None, None]:
     """Asynchronous generator that yields random numbers.
     """
     for _ in range(10):
