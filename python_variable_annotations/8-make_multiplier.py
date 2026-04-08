@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
 This module defines a function `make_multiplier` that takes a float as an
 argument and returns a function that multiplies a float by the multiplier.
