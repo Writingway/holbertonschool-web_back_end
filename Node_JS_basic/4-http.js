@@ -5,5 +5,4 @@ const app = http.createServer((req, res) => {
 });
 
 app.listen(1245, () => {
-  console.log('Server running at http://localhost:1245/');
 });
