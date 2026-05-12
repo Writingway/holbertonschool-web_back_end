@@ -6,7 +6,7 @@ const app = http.createServer((req, res) => {
     countStudents(process.argv[2])
       .then((result) => {
         res.writeHead(200, { 'Content-Type': 'text/plain' });
-        res.end(result);
+        res.end('This is the list of our students\n' + result);
       })
       .catch((error) => {
         res.writeHead(500, { 'Content-Type': 'text/plain' });
