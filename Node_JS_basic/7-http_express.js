@@ -5,11 +5,13 @@ const app = express();
 const port = 1245;
 
 app.get('/', (req, res) => {
+  res.type('text/plain');
   res.send('Hello Holberton School!');
 });
 
 app.get('/students', (req, res) => {
-  countStudents('database.csv')
+  res.type('text/plain');
+  countStudents(process.argv[2])
     .then((students) => {
       res.send(`This is the list of our students\n${students}`);
     })
