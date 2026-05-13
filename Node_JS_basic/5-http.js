@@ -6,7 +6,7 @@ const app = http.createServer((req, res) => {
     countStudents(process.argv[2])
       .then((result) => {
         res.writeHead(200, { 'Content-Type': 'text/plain' });
-        res.end('This is the list of our students\n' + result);
+        res.end(result);
       })
       .catch((error) => {
         res.writeHead(500, { 'Content-Type': 'text/plain' });
@@ -15,12 +15,7 @@ const app = http.createServer((req, res) => {
   } else if (req.url === '/') {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.end('Hello Holberton School!');
-  } else {
-    res.writeHead(404, { 'Content-Type': 'text/plain' });
-    res.end('404 Not Found');
   }
-
-  console.log(`Request method: ${req.method} - Request URL: ${req.url}`);
 });
 
 app.listen(1245);
