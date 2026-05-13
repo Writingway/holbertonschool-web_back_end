@@ -27,7 +27,7 @@ const app = http.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/plain' });
 
   if (req.url === '/') {
-    res.end('Hello Holberton School!');
+    return;
   } else if (req.url === '/students') {
     countStudents(process.argv[2])
       .then((result) => {
@@ -36,7 +36,9 @@ const app = http.createServer((req, res) => {
       .catch((err) => {
         res.end(`This is the list of our students\n${err.message}`);
       });
+    return;
   }
+  res.end('Hello Holberton School!');
 });
 
 app.listen(1245);
