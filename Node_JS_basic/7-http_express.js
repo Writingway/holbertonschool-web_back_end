@@ -11,10 +11,10 @@ app.get('/', (req, res) => {
 app.get('/students', (req, res) => {
   countStudents('database.csv')
     .then((students) => {
-      res.send(`${students}`);
+      res.send(`This is the list of our students\n${students}`);
     })
     .catch((error) => {
-      res.send(`${error.message}`);
+      res.send(`This is the list of our students\n${error.message}`);
     });
 });
 
